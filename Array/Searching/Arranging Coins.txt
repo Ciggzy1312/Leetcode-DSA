@@ -1,0 +1,20 @@
+//https://leetcode.com/problems/arranging-coins/
+
+
+class Solution {
+    public int arrangeCoins(int n) {
+        /*if(n<2){
+            return n;
+        }*/
+        int rem=n;
+        for(int i=1;i<=n;i++){
+            if(rem<i || rem==0){
+                return (i-1);
+            }
+            
+            rem-=i;
+        }
+        
+        return 1;
+    }
+}
